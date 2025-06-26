@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "slider",
+			"path": "../slider"
+		},
+		{
+			"name": "Новая папка",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Новая папка"
+	}
+}

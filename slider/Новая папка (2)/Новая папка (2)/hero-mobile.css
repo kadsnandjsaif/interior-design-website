@@ -1,0 +1,131 @@
+/* ===============================================
+   БЛОК "СТУДИЯ ДИЗАЙНА" - МОБИЛЬНАЯ ВЕРСИЯ
+   Легко копируемый блок для использования в других проектах
+   
+   ИНСТРУКЦИЯ ПО ПОДКЛЮЧЕНИЮ:
+   1. Подключите этот CSS файл: <link rel="stylesheet" href="hero-mobile.css">
+   2. Подключите шрифты Inter и Playfair Display
+   3. Скопируйте HTML структуру из комментария ниже
+   =============================================== */
+
+/* 
+HTML СТРУКТУРА:
+<div class="hero-mobile">
+  <div class="hero-mobile-content">
+    <h1 class="hero-mobile-title">
+      Студия дизайна интерьеров
+      <span class="hero-mobile-subtitle">основанная <span class="hero-mobile-italic">Надеждой и Сергеем Бойко</span></span>
+    </h1>
+    <img src="slider/надеждой и сергеем бойко.jpg" alt="Надежда и Сергей Бойко" class="hero-mobile-image">
+  </div>
+  
+  <div class="hero-mobile-features">
+    <div class="hero-mobile-feature">не предлагаем типовых и шаблонных решений</div>
+    <div class="hero-mobile-feature">детально прорабатываем зоны хранения вещей</div>
+    <div class="hero-mobile-feature">выходим за рамки оговоренных условий и предлагаем сверх ожиданий</div>
+    <div class="hero-mobile-feature">создаем не только красивую картинку, а удобное пространство</div>
+  </div>
+</div>
+
+ТРЕБУЕМЫЕ ШРИФТЫ:
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+*/
+
+/* Общие стили для предотвращения проблем */
+* {
+    box-sizing: border-box;
+}
+
+/* Основной контейнер */
+.hero-mobile {
+    padding: 50px 15px;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Контент блока */
+.hero-mobile-content {
+    margin-bottom: 40px;
+}
+
+/* Основной заголовок */
+.hero-mobile-title {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #222;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+/* Подзаголовок */
+.hero-mobile-subtitle {
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 12px;
+}
+
+/* Курсивный текст */
+.hero-mobile-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #222;
+    font-weight: 500;
+}
+
+/* Изображение */
+.hero-mobile-image {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 25px 0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Контейнер особенностей */
+.hero-mobile-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Отдельная особенность */
+.hero-mobile-feature {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.4;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 12px;
+    border-left: 3px solid #e0e0e0;
+    text-align: left;
+}
+
+/* Адаптация для очень маленьких экранов */
+.hero-mobile-title {
+    font-size: clamp(24px, 5vw, 32px);
+}
+
+.hero-mobile-subtitle {
+    font-size: clamp(16px, 4vw, 18px);
+}
+
+.hero-mobile-feature {
+    font-size: clamp(12px, 3.5vw, 14px);
+}
+
+/* ===============================================
+   КОНЕЦ БЛОКА "СТУДИЯ ДИЗАЙНА"
+   =============================================== */ 

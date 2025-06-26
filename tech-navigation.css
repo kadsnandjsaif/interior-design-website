@@ -1,0 +1,141 @@
+/* Техническая навигация */
+.tech-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 9999;
+    padding: 8px 15px;
+    backdrop-filter: blur(10px);
+}
+
+.tech-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.tech-nav-logo {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.tech-nav-logo:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+.tech-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tech-nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.tech-nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.tech-nav-link.active {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.tech-nav-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255,255,255,0.3);
+    margin: 0 5px;
+}
+
+.tech-nav-version {
+    color: rgba(255,255,255,0.8);
+    font-size: 12px;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .tech-nav {
+        padding: 6px 10px;
+    }
+    
+    .tech-nav-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .tech-nav-links {
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .tech-nav-link {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    
+    .tech-nav-logo {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-nav-links {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .tech-nav-link {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Отступ для контента страницы */
+body {
+    padding-top: 60px !important;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 100px !important;
+    }
+} 

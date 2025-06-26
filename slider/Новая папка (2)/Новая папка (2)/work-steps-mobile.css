@@ -1,0 +1,165 @@
+/* ===============================================
+   БЛОК "ЭТАПЫ РАБОТЫ" - МОБИЛЬНАЯ ВЕРСИЯ
+   Легко копируемый блок для использования в других проектах
+   
+   ИНСТРУКЦИЯ ПО ПОДКЛЮЧЕНИЮ:
+   1. Подключите этот CSS файл: <link rel="stylesheet" href="work-steps-mobile.css">
+   2. Скопируйте HTML структуру из комментария ниже
+   3. Добавьте JavaScript код для интерактивности
+   =============================================== */
+
+/* 
+HTML СТРУКТУРА:
+<div class="work-steps-mobile">
+  <h2 class="work-steps-mobile-title">Этапы работы</h2>
+  <div class="work-steps-mobile-subtitle">
+    элемент, на котором строится работа в студии — доверительные отношения.<br>
+    на каждом этапе: от первой встречи до общения за чашечкой чая<br>
+    в квартире с уже выполненным ремонтом
+  </div>
+  <ol class="work-steps-mobile-list" id="workStepsMobileList">
+    <li class="work-step-mobile" data-step="0">знакомство и заполнение анкеты</li>
+    <li class="work-step-mobile" data-step="1">заключение договора</li>
+    <li class="work-step-mobile" data-step="2">разработка планировочного решения</li>
+    <li class="work-step-mobile" data-step="3">составление коллажей концепции</li>
+    <li class="work-step-mobile" data-step="4">3д визуализация</li>
+    <li class="work-step-mobile" data-step="5">разработка полного пакета чертежей</li>
+    <li class="work-step-mobile" data-step="6">подготовка сметы чистовых материалов</li>
+    <li class="work-step-mobile" data-step="7">сдача проекта для реализации</li>
+  </ol>
+</div>
+*/
+
+/* Общие стили для предотвращения горизонтального скролла */
+* {
+    box-sizing: border-box;
+}
+
+/* Основной контейнер */
+.work-steps-mobile {
+    padding: 40px 15px;
+    background: #fff;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Заголовок */
+.work-steps-mobile-title {
+    font-family: Inter, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #222;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+}
+
+/* Подзаголовок */
+.work-steps-mobile-subtitle {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+}
+
+/* Список этапов */
+.work-steps-mobile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step-counter;
+}
+
+/* Отдельный этап */
+.work-step-mobile {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #222;
+    line-height: 1.3;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Нумерация этапов */
+.work-step-mobile::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #888;
+    transition: color 0.3s;
+}
+
+/* Убираем линию у последнего элемента */
+.work-step-mobile:last-child {
+    border-bottom: none;
+}
+
+/* Активное состояние этапа */
+.work-step-mobile.active {
+    color: #000;
+    font-weight: 500;
+}
+
+.work-step-mobile.active::before {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Контейнер для выплывающей картинки */
+.work-step-mobile-image-container {
+    width: calc(100% - 30px);
+    max-width: 300px;
+    margin: 15px 0;
+    position: relative;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.4s ease;
+}
+
+/* Показать картинку */
+.work-step-mobile-image-container.show {
+    opacity: 1;
+    max-height: 200px;
+}
+
+/* Изображение */
+.work-step-mobile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Стрелка в углу картинки */
+.work-step-mobile-arrow {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #222;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* ===============================================
+   КОНЕЦ БЛОКА "ЭТАПЫ РАБОТЫ"
+   =============================================== */ 
