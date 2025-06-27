@@ -452,6 +452,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Переходы по футерным ссылкам на десктопе
+  document.querySelectorAll('.footer-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const text = this.textContent.trim();
+      if (text === 'Услуги') window.location.href = 'index.html#services-section';
+      else if (text === 'Портфолио') window.location.href = 'portfolio.html';
+      else if (text === 'О нас') window.location.href = 'about.html';
+      else if (text === 'Блог') window.location.href = 'blogger.html';
+      else if (text === 'Философия') window.location.href = 'doverie.html';
+      else if (text === 'Контакты') window.location.href = 'modalWindow.html';
+    });
+  });
 });
 
 // Универсальная функция для создания слайдера

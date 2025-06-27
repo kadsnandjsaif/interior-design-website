@@ -21,6 +21,7 @@ body {
 section, div, img, video, iframe {
     max-width: 100%;
     box-sizing: border-box;
+    margin-right: 7px;
 }
 
 /* Блок Студия дизайна - мобильная версия */
@@ -149,6 +150,7 @@ section, div, img, video, iframe {
     margin: 0 auto;
     position: relative;
     z-index: 3;
+    counter-reset: feature-counter;
 }
 
 .hero-mobile-feature {
@@ -157,13 +159,26 @@ section, div, img, video, iframe {
     font-weight: 400;
     color: #555;
     line-height: 1.4;
-    padding: 15px 20px;
-    background: rgba(255,255,255,0.8);
-    border-radius: 12px;
-    border-left: 3px solid #e0e0e0;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    counter-increment: feature-counter;
+    border-bottom: 1px solid #5555552a;
+}
+
+.hero-mobile-feature::before {
+    content: counter(feature-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    line-height: 1.4;
 }
 
 @media screen and (max-width: 400px) {
@@ -178,7 +193,7 @@ section, div, img, video, iframe {
     
     .hero-mobile-vectors {
         gap: 2px;
-        top: -70px;
+        top: -100px;
         height: 350px;
     }
     
@@ -612,8 +627,6 @@ section, div, img, video, iframe {
 
 .footer-mobile-socials img:hover {
     filter: brightness(0) invert(1) grayscale(0);
-    background: rgba(255, 255, 255, 0.1);
-    transform: scale(1.1);
 }
 
 .footer-mobile-bottom {
@@ -815,7 +828,7 @@ p {
     border-radius: 15px;
     transition: opacity 0.3s;
     display: block;
-margin: 0 auto;
+    margin: 0 auto;
 }
 
 .slider-label {
@@ -933,9 +946,9 @@ margin: 0 auto;
     display: block;
     width: 0;
     height: 0;
-    border-left: 14px solid #222;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
+    border-left: 20px solid #222;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
 }
 
 /* Круговой текст убран */
@@ -1113,7 +1126,7 @@ margin: 0 auto;
     color: #fff;
     white-space: nowrap;
     animation: marquee-scroll 20s linear infinite;
-    background: rgba(0,0,0,0.6);
+    
     padding: 15px 20px;
     border-radius: 25px;
 }
@@ -1212,7 +1225,7 @@ margin: 0 auto;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    height: 280px;
+    height: 380px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     display: block;
     width: 100%;
@@ -1235,7 +1248,7 @@ margin: 0 auto;
 }
 
 .portfolio-grid-mobile .portfolio-item-mobile.small {
-    height: 140px;
+    height: 230px;
 }
 
 /* Удален неспецифичный стиль - заменен специфичными выше */

@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const items = portfolioData[type] || [];
             portfolioSliderContainer.innerHTML = items.map(item => `
                 <div class="portfolio-item-mobile" style="position: relative; overflow: hidden;">
-                    <img src="${item.img}" alt="${item.title}" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+                    <img src="${item.img}" alt="${item.title}" style="width: 100%; height: 682.5px; object-fit: cover; display: block;">
                     <div class="portfolio-item-content-mobile" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: white; padding: 20px 15px 15px 15px; z-index: 10;">
                         <div class="portfolio-item-title-mobile" style="font-size: 16px; font-weight: 600; margin-bottom: 4px; color: white;">${item.title}</div>
                         <div class="portfolio-item-desc-mobile" style="font-size: 12px; opacity: 0.9; color: white;">${item.desc}</div>
@@ -1592,4 +1592,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+});
+
+// Переходы по футерным ссылкам на мобилке
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.footer-mobile-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const text = this.textContent.trim();
+      const isMobile = window.innerWidth <= 600;
+      if (text === 'Услуги') window.location.href = 'index-m.html#services-section';
+      else if (text === 'Портфолио') window.location.href = isMobile ? 'portfolio-m.html' : 'portfolio.html';
+      else if (text === 'О нас') window.location.href = isMobile ? 'about-m.html' : 'about.html';
+      else if (text === 'Блог') window.location.href = isMobile ? 'blogger-m.html' : 'blogger.html';
+      else if (text === 'Философия') window.location.href = 'doverie.html';
+      else if (text === 'Контакты') window.location.href = 'modalWindow.html';
+    });
+  });
 });
