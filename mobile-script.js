@@ -1605,8 +1605,31 @@ document.addEventListener('DOMContentLoaded', function() {
       else if (text === 'Портфолио') window.location.href = isMobile ? 'portfolio-m.html' : 'portfolio.html';
       else if (text === 'О нас') window.location.href = isMobile ? 'about-m.html' : 'about.html';
       else if (text === 'Блог') window.location.href = isMobile ? 'blogger-m.html' : 'blogger.html';
-      else if (text === 'Философия') window.location.href = 'doverie.html';
+      else if (text === 'Философия') window.location.href = isMobile ? 'portfolio-detail-m.html' : 'portfolio-detail.html';
       else if (text === 'Контакты') window.location.href = 'modalWindow.html';
     });
   });
+});
+
+// Обработчики для кнопок портфолио на мобильной главной
+document.addEventListener('DOMContentLoaded', function() {
+    // Обработчики для кнопок "+" в карточках портфолио
+    document.querySelectorAll('.portfolio-btn-mobile').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = 'portfolio-m.html';
+        });
+    });
+    
+    // Обработчики для самих карточек портфолио
+    document.querySelectorAll('.portfolio-item-mobile').forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Не срабатывает, если кликнули на кнопку
+            if (e.target.classList.contains('portfolio-btn-mobile')) {
+                return;
+            }
+            window.location.href = 'portfolio-m.html';
+        });
+    });
 });

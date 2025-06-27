@@ -163,8 +163,7 @@ function renderPortfolioCards(type = 'flat') {
   container.querySelectorAll('.portfolio-plus').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = btn.getAttribute('data-id');
-      // Переход на детальную страницу (заглушка)
-      window.location.href = `portfolio-detail.html?id=${id}`;
+      openPortfolioDetail(id);
     });
   });
 }
@@ -425,4 +424,14 @@ function renderReviewsMarquee() {
     });
   }
   track.innerHTML = cards;
+}
+
+// Заменить переход на детальное портфолио с учётом мобильной версии
+function openPortfolioDetail(id) {
+  const isMobile = window.innerWidth <= 600;
+  if (isMobile) {
+    window.location.href = `portfolio-detail-m.html?id=${id}`;
+  } else {
+    window.location.href = `portfolio-detail.html?id=${id}`;
+  }
 }

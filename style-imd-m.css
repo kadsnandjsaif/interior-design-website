@@ -611,1643 +611,19 @@ section, div, img, video, iframe {
 
 .footer-mobile-socials {
     display: flex;
-    gap: clamp(12px, 3vw, 15px);
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer-mobile-socials img {
-    width: clamp(20px, 4vw, 24px);
-    height: clamp(20px, 4vw, 24px);
-    filter: brightness(0) invert(1) grayscale(1);
-    transition: all 0.3s;
-    padding: 5px;
-    border-radius: 4px;
-}
-
-.footer-mobile-socials img:hover {
-    filter: brightness(0) invert(1) grayscale(0);
-}
-
-.footer-mobile-bottom {
-    background: #1a1a1a;
-    text-align: center;
-    padding: 15px 20px;
-    font-family: Inter, sans-serif;
-    font-size: clamp(12px, 2.5vw, 14px);
-    color: #888;
-    border-top: 1px solid #333;
-}
-
-/* Адаптивные брейкпоинты */
-@media screen and (max-width: 480px) {
-    .footer-mobile {
-        padding: 30px 0 0 0;
-    }
-    
-    .footer-mobile-content {
-        padding: 0 15px 25px 15px;
-        gap: 25px;
-        max-width: none;
-    }
-    
-    .footer-mobile-links {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px 15px;
-        max-width: 250px;
-    }
-    
-    .footer-mobile-logo-row {
-        gap: 12px;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .footer-mobile-content {
-        gap: 20px;
-        padding: 0 10px 20px 10px;
-    }
-    
-    .footer-mobile-links {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        max-width: 200px;
-    }
-    
-    .footer-mobile-logo-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .footer-mobile-socials {
-        gap: 10px;
-    }
-    
-    .footer-mobile-bottom {
-        padding: 12px 10px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .footer-mobile-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        max-width: 700px;
-        gap: 40px;
-    }
-    
-    .footer-mobile-logo {
-        flex: 1;
-        text-align: left;
-    }
-    
-    .footer-mobile-menu {
-        flex: 1;
-        align-items: flex-start;
-    }
-    
-    .footer-mobile-contacts {
-        flex: 1;
-        align-items: flex-end;
-        text-align: right;
-    }
-    
-    .footer-mobile-links {
-        grid-template-columns: 1fr 1fr;
-        max-width: none;
-        text-align: left;
-    }
-}
-   
-  .wrapper {
-    padding-left: 15px;
-    padding-top: 80px;
-}
-
-.topImg {
-    position: fixed;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    left: 10px;
-    right: 10px;
-    top: 0;
-    background: white;
-    z-index: 1000;
-    padding: 10px 0;
-}
-
-.left {
-    float: right;
-}
-
-h1 {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 100%;
-    margin: 0;
-    height: max-content;
-}
-
-p {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 125%;
-    height: max-content;
-}
-
-.midlTextP {
-    width: 100px;
-    height: max-content;
-}
-
-.midlText, .botText {
-    display: flex;
-    align-items: center;
-    height: max-content;
-}
-
-.bt {
-    position: relative;
-    margin-top: 10px;
-    height: 40px;
-    width: max-content;
-    background: black;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 19px;
-    font-weight: 400;
-    cursor: pointer;
-    border: none;
-}
-
-.bt p {
-    margin: 0;
-    font-family: Inter;
-}
-
-.circle {
-    margin-left: 60px;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    background: #fff;
-}
-
-.slider {
-    width: 100%;
-    max-width: 700px;
-    margin: 30px auto 0;
-    min-height: 300px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-.wrapper-slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: max-content;
-    text-align: center;
-}
-
-.slider-img {
-    width: 100%;
-    min-height:650px;
-    max-height: 650px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px;
-    transition: opacity 0.3s;
-    display: block;
-    margin: 0 auto;
-}
-
-.slider-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #fff !important;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    background: rgba(0,0,0,0.8) !important;
-    padding: 10px 20px;
-    border-radius: 25px;
-    z-index: 15 !important;
-    backdrop-filter: blur(10px);
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.slider-indicators {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    display: flex;
-    gap: 8px;
-    z-index: 12 !important;
-}
-
-.slider-bar {
-    height: 4px;
-    width: 24px;
-    border-radius: 2px;
-    background: #444;
-    opacity: 0.5;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.slider-bar.active {
-    width: 48px;
-    background: #fff;
-    opacity: 1;
-    box-shadow: 0 0 6px 1px rgba(255,255,255,0.3);
-}
-
-.slider-thumbs {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 70px;
-    display: flex;
-    gap: 8px;
-    z-index: 13 !important;
-}
-
-.slider-thumb {
-    width: 50px;
-    height: 35px;
-    object-fit: cover;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-    opacity: 0.7;
-    border: 2px solid transparent;
-}
-.why-play {
-    width: 140px;
-    height: 140px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.why-play-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* gap: 30px; */
-    margin-bottom: 30px;
-    padding: 0 20px;
-}
-
-.why-play-btn {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: none;
-    background: #e5e5e5;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    z-index: 3;
-}
-
-.why-play-icon {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: 2px;
-}
-
-.why-play-icon::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #222;
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
-}
-
-/* Круговой текст убран */
-
-.why-play-svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
-    pointer-events: none;
-    z-index: 1;
-    animation: spin-svg 18s linear infinite;
-    opacity: 0.8;
-}
-
-.why-fingerprint {
-    width: 160px;
-    height: auto;
-    opacity: 0.8;
-    flex-shrink: 0;
-}
-
-@keyframes spin-svg {
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-.slider-thumb.active {
-    opacity: 1;
-    border-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.slider-title {
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 0 20px;
-}
-
-.why-section {
-    padding: 40px 20px;
-    background: #fafafa;
-    margin-top: 30px;
-}
-
-.why-title {
-    font-family: Inter;
-    font-size: 28px;
-    font-weight: 400;
-    color: #222;
-    margin: 0 0 30px 0;
-    line-height: 1.1;
-    text-align: left;
-}
-
-
-
-.why-advantages {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px 0;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-.why-advantages::-webkit-scrollbar {
-    display: none;
-}
-
-.why-advantage {
-    
-    max-width: 200px;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-}
-
-.why-num {
-    font-family: Inter;
-    font-weight: 300;
-    font-size: 42.67px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #666666;
-    margin-bottom: 8px;
-}
-
-.why-adv-title {
-    font-family: Inter;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #222;
-    margin-bottom: 6px;
-}
-
-.why-adv-text {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #888;
-}
-
-/* Адаптация для маленьких экранов */
-
-/* Рукописный текст блок */
-.handwritten-mobile {
-    padding: 40px 20px;
-    background: #fafafa;
-}
-
-.handwritten-text {
-    max-width: 100%;
-}
-
-.handwritten-line {
-    font-family: Inter;
-    font-size: 28px;
-    font-weight: 400;
-    color: #888;
-    line-height: 1.2;
-    margin-bottom: 8px;
-    text-align: left;
-}
-
-.handwritten-italic {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    color: #222;
-}
-
-.handwritten-right {
-    text-align: right;
-    padding-right: 20%;
-}
-
-.handwritten-left {
-    text-align: left;
-    padding-left: 15%;
-}
-
-.handwritten-left-more {
-    text-align: left;
-    padding-left: 25%;
-}
-
-/* Бегущая строка */
-.marquee-mobile {
-    width: 100%;
-    max-width: 700px;
-    height: 650px;
-    background: url('slider/бегущая строка.png') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-margin: 0 auto;
-}
-
-.marquee-track-mobile {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    white-space: nowrap;
-    animation: marquee-scroll 20s linear infinite;
-    
-    padding: 15px 20px;
-    border-radius: 25px;
-}
-
-.dot-mobile {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 900;
-    opacity: 0.8;
-    margin: 0 8px;
-}
-
-@keyframes marquee-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* Адаптация для маленьких экранов */
-@media (max-width: 500px) {
-    .handwritten-mobile {
-        padding: 30px 15px;
-    }
-    
-    .handwritten-line {
-        font-size: 24px;
-        margin-bottom: 6px;
-    }
-    
-    .handwritten-right {
-        padding-right: 15%;
-    }
-    
-    .handwritten-left {
-        padding-left: 10%;
-    }
-    
-    .handwritten-left-more {
-        padding-left: 15%;
-    }
-    
-    .marquee-mobile {
-        height: 400px;
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-    
-    .marquee-track-mobile {
-        font-size: 14px;
-        padding: 12px 16px;
-        gap: 6px;
-    }
-    
-    .dot-mobile {
-        font-size: 16px;
-        margin: 0 6px;
-    }
-}
-
-/* Портфолио */
-.portfolio-mobile {
-    padding: 30px 15px;
-    background: #fff;
-}
-
-.portfolio-title-mobile {
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 400;
-    color: #222;
-    margin: 0 0 25px 0;
-    line-height: 1.1;
-}
-
-.portfolio-grid-mobile {
-    display: flex;
-    gap: 10px;
-}
-
-.portfolio-col-left {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.portfolio-col-right {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: stretch;
-}
-
-/* Статические карточки портфолио в сетке */
-.portfolio-grid-mobile .portfolio-item-mobile {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    height: 380px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    flex-shrink: 0;
-}
-
-/* Карточки портфолио в слайдере */
-.portfolio-slider-mobile .portfolio-item-mobile {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(66.666vw - 20px);
-    min-width: calc(66.666vw - 20px);
-    height: 250px;
-    flex-shrink: 0;
-}
-
-.portfolio-grid-mobile .portfolio-item-mobile.small {
-    height: 230px;
-}
-
-/* Удален неспецифичный стиль - заменен специфичными выше */
-
-.portfolio-grid-mobile .portfolio-item-mobile:hover img {
-    transform: scale(1.05);
-}
-
-/* Стили для статических карточек */
-.portfolio-grid-mobile .portfolio-content-mobile {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    z-index: 10 !important;
-    display: block !important;
-    visibility: visible !important;
-}
-
-/* Стили для карточек слайдера */
-.portfolio-slider-mobile .portfolio-item-content-mobile {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8)) !important;
-    color: white !important;
-    padding: 20px 15px 15px 15px;
-    z-index: 10 !important;
-    display: block !important;
-    visibility: visible !important;
-}
-
-/* Надписи для статических карточек */
-.portfolio-grid-mobile .portfolio-name-mobile {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 600;
-    color: #222 !important;
-    background: rgba(255,255,255,0.95) !important;
-    padding: 6px 10px;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    display: inline-block !important;
-    visibility: visible !important;
-    z-index: 12 !important;
-}
-
-.portfolio-grid-mobile .portfolio-desc-mobile {
-    font-family: Inter;
-    font-size: 11px;
-    font-weight: 400;
-    color: #222 !important;
-    background: rgba(255,255,255,0.95) !important;
-    padding: 6px 10px;
-    border-radius: 6px;
-    line-height: 1.3;
-    display: block !important;
-    visibility: visible !important;
-    z-index: 12 !important;
-}
-
-.portfolio-btn-mobile {
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: #fff;
-    color: #222;
-    font-size: 18px;
-    font-weight: 300;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bt-mobile {
-    margin-top: 25px;
-    height: 35px;
-    background: black;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    font-size: 20px;
-    color: #fff;
-    font-weight: 400;
-    cursor: pointer;
-    border: none;
-    justify-content: center;
-    gap: 15px;
-}
-
-.bt-mobile p {
-    margin: 0;
-    font-family: Inter;
-    font-size: 14px;
-}
-
-.circle-mobile {
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;    
-    background: #fff;
-   
-}
-
-/* Портфолио стили готовы для переноса */
-
-/* Услуги */
-.services-m {
-    padding: 30px 15px;
-    background: #fff;
-}
-
-.services-m-title {
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 400;
-    color: #222;
-    margin: 0 0 20px 0;
-}
-
-.services-m-nav, .services-m-thumbs {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px 0;
-    scroll-snap-type: x mandatory;
-}
-
-.services-m-nav::-webkit-scrollbar, .services-m-thumbs::-webkit-scrollbar {
-    display: none;
-}
-
-.services-m-nav button {
-    min-width: 180px;
-    padding: 8px 12px;
-    background: #f5f5f5;
-    border: none;
-    border-radius: 20px;
-    font-family: Inter;
-    font-size: 12px;
-    color: #666;
-    cursor: pointer;
-    flex-shrink: 0;
-}
-
-.services-m-nav button.active {
-    background: #222;
-    color: #fff;
-}
-
-.services-m-img {
-    width: 100%;
-    height: 350px;
-    border-radius: 12px;
-    object-fit: cover;
-    margin: 10px 0;
-}
-
-.services-m-thumbs img {
-    width: 120px;
-    height: 80px;
-    border-radius: 8px;
-    object-fit: cover;
-    opacity: 0.6;
-    cursor: pointer;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-}
-
-.services-m-thumbs img.active {
-    opacity: 1;
-    border: 2px solid #222;
-}
-
-.services-m-content {
-    padding-top: 15px;
-}
-
-.services-m-content h3 {
-    font-family: Inter;
-    font-size: 18px;
-    font-weight: 600;
-    color: #222;
-    margin: 0 0 15px 0;
-}
-
-.services-m-content div {
-    font-family: Inter;
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.3;
-}
-
-.services-m-price span {
-    font-size: 24px;
-    font-weight: 600;
-    color: #222;
-}
-
-/* Тест */
-.test-m {
-    padding: 40px 15px 50px 15px;
-    background: #fff;
-    text-align: left;
-}
-
-.test-m-title {
-    font-family: Inter;
-    font-size: 32px;
-    font-weight: 400;
-    color: #222;
-    margin: 0 0 15px 0;
-    line-height: 1.1;
-}
-
-.test-m-subtitle {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 400;
-    color: #666;
-    margin: 0 0 35px 0;
-    line-height: 1.4;
-}
-
-.test-m-italic {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    color: #666;
-    font-weight: 400;
-    font-size: 32px;
-}
-
- .test-m-indent {
-      margin-left: 60px;
-      max-width: calc(100% - 60px);
-  }
-
-/* Портфолио слайдер */
-.portfolio-slider-section {
-    padding: 0 15px;
-    background: #fff;
-}
-
-.portfolio-slider-container {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    min-height: 300px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-wrapper-slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: max-content;
-    text-align: center;
-}
-
-.portfolio-slider-img {
-    width: 100%;
-    min-height: 650px;
-    max-height: 650px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px;
-    transition: opacity 0.3s;
-    display: block;
-    margin: 0 auto;
-}
-
-.portfolio-slider-label {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #fff !important;
-    font-family: Inter;
-    font-size: 12px;
-    font-weight: 500;
-    background: rgba(0,0,0,0.8) !important;
-    padding: 10px 20px;
-    border-radius: 25px;
-    z-index: 15 !important;
-    backdrop-filter: blur(10px);
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.portfolio-slider-indicators {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    display: flex;
-    gap: 8px;
-    z-index: 12 !important;
-}
-
-.portfolio-slider-bar {
-    height: 4px;
-    width: 24px;
-    border-radius: 2px;
-    background: #444;
-    opacity: 0.5;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.portfolio-slider-bar.active {
-    width: 48px;
-    background: #fff;
-    opacity: 1;
-    box-shadow: 0 0 6px 1px rgba(255,255,255,0.3);
-}
-
-.portfolio-slider-thumbs {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 70px;
-    display: flex;
-    gap: 8px;
-    z-index: 13 !important;
-}
-
-.portfolio-slider-thumb {
-    width: 50px;
-    height: 35px;
-    object-fit: cover;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-    opacity: 0.7;
-    border: 2px solid transparent;
-}
-
-.portfolio-slider-thumb.active {
-    opacity: 1;
-    border-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-/* Этапы работы */
-.work-steps-mobile{padding:40px 15px;background:#fff;overflow:hidden}
-.work-steps-mobile-title{font:400 28px/1.1 Inter;color:#222;margin:0 0 20px}
-.work-steps-mobile-subtitle{font:400 14px/1.4 Inter;color:#888;margin:0 0 30px}
-.work-steps-mobile-list{list-style:none;padding:0;margin:0;counter-reset:step-counter}
-.work-step-mobile{font:400 16px/1.3 Inter;color:#222;padding:15px 0 15px 35px;border-bottom:1px solid #eee;counter-increment:step-counter;position:relative;cursor:pointer;transition:all .3s}
-.work-step-mobile::before{content:counter(step-counter);position:absolute;left:0;top:15px;font:400 16px Inter;color:#888;transition:color .3s;width:25px}
-.work-step-mobile:last-child{border-bottom:none}
-.work-step-mobile.active,.work-step-mobile.active::before{color:#000;font-weight:500}
-.work-step-mobile-image-container{width:calc(100% - 30px);max-width:300px;margin:15px 0;height:200px;border-radius:12px;overflow:hidden;opacity:0;max-height:0;transition:all .4s ease}
-.work-step-mobile-image-container.show{opacity:1;max-height:200px}
-.work-step-mobile-image-container img{width:100%;height:100%;object-fit:cover}
-.work-step-mobile-arrow{position:absolute;top:12px;right:12px;width:32px;height:32px;background:rgba(255,255,255,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:#222;box-shadow:0 2px 12px rgba(0,0,0,.15)}
-
-/* Новый блок */
-.new-block-mobile{padding:40px 15px;background:#fff}
-.new-block-mobile-title{font:400 28px/1.1 Inter;color:#222;margin:0 0 30px}
-.new-block-mobile-list{display:flex;flex-direction:column;gap:20px}
-.new-block-mobile-item{display:flex;gap:15px;align-items:flex-start}
-.new-block-mobile-number{font:300 35px/1 Inter;color:#666;min-width:50px;flex-shrink:0}
-.new-block-mobile-text{font:400 18px/1 Inter;text-transform:lowercase;color:#222;flex:1}
-
-/* FAQ блок */
-.faq-mobile{padding:40px 15px;background:#fff;overflow:hidden}
-.faq-mobile-title{font:400 28px/1.1 Inter;color:#222;margin:0 0 20px}
-.faq-mobile-subtitle{font:400 14px/1.4 Inter;color:#888;margin:0 0 30px}
-.faq-mobile-list{list-style:none;padding:0;margin:0;counter-reset:faq-counter}
-.faq-mobile-item{font:400 16px/1.3 Inter;color:#222;padding:15px 0 15px 35px;border-bottom:1px solid #eee;counter-increment:faq-counter;position:relative;cursor:pointer;transition:all .3s}
-.faq-mobile-item::before{content:counter(faq-counter);position:absolute;left:0;top:15px;font:400 16px Inter;color:#888;transition:color .3s;width:25px}
-.faq-mobile-item:last-child{border-bottom:none}
-.faq-mobile-item.active,.faq-mobile-item.active::before{color:#000;font-weight:500}
-.faq-mobile-answer-container{width:calc(100% - 30px);margin:15px 0;padding:20px;background:#f8f8f8;border-radius:12px;opacity:0;max-height:0;transition:all .4s ease;overflow:hidden}
-.faq-mobile-answer-container.show{opacity:1;max-height:200px}
-.faq-mobile-answer{font:400 14px/1.4 Inter;color:#666}
-
-/* ===== ПОРТФОЛИО МОБИЛЬНАЯ ВЕРСИЯ ===== */
-
-/* Фильтр портфолио */
-.portfolio-filter-mobile {
-    display: flex;
-    gap: 10px;
-    padding: 20px 15px;
-    justify-content: center;
-    background: white;
-}
-
-.portfolio-filter-btn-mobile {
-    padding: 12px 20px;
-    border: 2px solid #e5e5e5;
-    background: white;
-    color: #666;
-    border-radius: 25px;
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.portfolio-filter-btn-mobile.active {
-    background: #222;
-    color: white;
-    border-color: #222;
-}
-
-.portfolio-filter-btn-mobile:hover {
-    background: #f0f0f0;
-}
-
-.portfolio-filter-btn-mobile.active:hover {
-    background: #333;
-}
-
-/* Грид портфолио */
-.portfolio-grid-mobile {
-    padding: 0 15px 30px 15px;
-    background: white;
-    overflow: hidden;
-}
-
-.portfolio-slider-mobile {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.3s ease;
-    will-change: transform;
-    padding: 0 5px;
-}
-
-/* Удален дублирующий стиль - объединен выше */
-
-.portfolio-slider-mobile .portfolio-item-mobile:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-}
-
-.portfolio-grid-mobile .portfolio-item-mobile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.portfolio-slider-mobile .portfolio-item-mobile img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-/* Эти стили перенесены в секцию с префиксами выше */
-
-.portfolio-slider-mobile .portfolio-item-title-mobile {
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    color: white !important;
-    display: block !important;
-    visibility: visible !important;
-    z-index: 12 !important;
-}
-
-.portfolio-slider-mobile .portfolio-item-desc-mobile {
-    font-family: Inter, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    opacity: 0.9;
-    color: white !important;
-    display: block !important;
-    visibility: visible !important;
-    z-index: 12 !important;
-}
-
-.portfolio-item-btn-mobile {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 32px;
-    height: 32px;
-    background: rgba(255,255,255,0.9);
-    border: none;
-    border-radius: 50%;
-    color: #222;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.portfolio-item-btn-mobile:hover {
-    background: white;
-    transform: scale(1.1);
-}
-
-@media (max-width: 480px) {
-    .portfolio-filter-mobile {
-        padding: 15px 10px;
-        gap: 8px;
-    }
-    
-    .portfolio-filter-btn-mobile {
-        padding: 10px 16px;
-        font-size: 13px;
-    }
-    
-    .portfolio-grid-mobile {
-        padding: 0 10px 25px 10px;
-    }
-    
-    .portfolio-slider-mobile {
-        gap: 12px;
-    }
-    
-    .portfolio-slider-mobile .portfolio-item-mobile {
-        width: calc(66.666vw - 16px);
-        min-width: calc(66.666vw - 16px);
-    }
-    
-    .portfolio-slider-mobile .portfolio-item-mobile img {
-        height: 220px;
-    }
-    
-    .portfolio-slider-mobile .portfolio-item-content-mobile {
-        padding: 15px 12px 12px 12px;
-    }
-    
-    .portfolio-slider-mobile .portfolio-item-title-mobile {
-        font-size: 15px;
-    }
-    
-    .portfolio-slider-mobile .portfolio-item-desc-mobile {
-        font-size: 11px;
-    }
-    
-    .portfolio-item-btn-mobile {
-        width: 28px;
-        height: 28px;
-        font-size: 16px;
-    }
-}
-
-/* ===== PORTFOLIO DETAIL MOBILE STYLES ===== */
-#portfolio-detail-slider {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    height: 60vh;
-    min-height: 300px;
-    box-sizing: border-box;
-}
-
-#portfolio-detail-slider .slider {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-#portfolio-detail-slider .slider-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.7s;
-    display: block;
-}
-
-#portfolio-detail-slider .slider-img.fade {
-    opacity: 0;
-}
-
-#portfolio-detail-slider .slider-main-title {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 110%;
-    color: #fff !important;
-    z-index: 15 !important;
-    max-width: 280px;
-    text-align: left;
-    pointer-events: none;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-#portfolio-detail-slider .slider-indicators {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    display: flex;
-    gap: 8px;
-    z-index: 12 !important;
-}
-
-#portfolio-detail-slider .slider-bar {
-    height: 4px;
-    width: 24px;
-    border-radius: 2px;
-    background: #444;
-    opacity: 0.5;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-#portfolio-detail-slider .slider-bar.active {
-    width: 48px;
-    background: #fff;
-    opacity: 1;
-    box-shadow: 0 0 6px 1px rgba(255,255,255,0.3);
-}
-
-#portfolio-detail-slider .slider-bar:hover {
-    background: #fff;
-    opacity: 0.8;
-}
-
-#portfolio-detail-slider .slider-thumbs {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    z-index: 13 !important;
-}
-
-#portfolio-detail-slider .slider-thumb {
-    width: 50px;
-    height: 35px;
-    object-fit: cover;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-    opacity: 0.7;
-    border: 2px solid transparent;
-}
-
-#portfolio-detail-slider .slider-thumb.active {
-    opacity: 1;
-    border-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.portfolio-detail-numbers {
-    padding: 30px 15px;
-    background: #fff;
-}
-
-.portfolio-detail-numbers-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.portfolio-detail-number-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.portfolio-detail-number {
-    font-family: Inter, sans-serif;
-    font-size: 32px;
-    font-weight: 300;
-    color: #D3D3D3;
-    margin-bottom: 6px;
-    line-height: 1;
-}
-
-.portfolio-detail-number-label {
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #181818;
-    line-height: 1.3;
-}
-
-.portfolio-detail-content {
-    padding: 20px 15px;
-    background: #fff;
-}
-
-.portfolio-detail-content-row {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.portfolio-detail-content-text {
-    order: 1;
-}
-
-.portfolio-detail-content-title {
-    font-family: Inter, sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 110%;
-    margin-bottom: 15px;
-    color: #232323;
-}
-
-.portfolio-detail-content-subtitle {
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #444;
-}
-
-.portfolio-detail-content-img {
-    order: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfolio-detail-content-img img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.portfolio-detail-img-full {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.portfolio-detail-img-full img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.portfolio-detail-img-row {
-    display: flex;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.portfolio-detail-img-half {
-    flex: 1 1 50%;
-}
-
-.portfolio-detail-img-half img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.portfolio-detail-content-bottom-text {
-    margin: 20px 0;
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #444;
-}
-
-.meeting-section-mobile {
-    padding: 40px 15px;
-    text-align: center;
-    background: #f8f8f8;
-}
-
-.meeting-section-mobile h2 {
-    font-family: Inter, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    color: #222;
-    line-height: 1.3;
-    margin: 0 0 25px 0;
-}
-
-.meeting-section-mobile em {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    color: #222;
-    font-weight: 400;
-}
-
-.meeting-btn {
-    background: #222;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s;
-}
-
-.meeting-btn:hover {
-    background: #333;
-}
-
-.meeting-btn span {
-    font-size: 18px;
-}
-
-.features-section-mobile {
-    padding: 40px 15px;
-    background: #fff;
-}
-
-.feature-item-mobile {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    margin-bottom: 25px;
-}
-
-.feature-item-mobile:last-child {
-    margin-bottom: 0;
-}
-
-.feature-num-mobile {
-    font-family: Inter, sans-serif;
-    font-weight: 300;
-    font-size: 35px;
-    color: #666;
-    min-width: 50px;
-    flex-shrink: 0;
-    line-height: 1;
-}
-
-.feature-text-mobile {
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    text-transform: lowercase;
-    color: #222;
-    flex: 1;
-    line-height: 1.2;
-}
-
-/* Footer styles for portfolio-detail-m */
-footer {
-    background: #232323;
-    color: #ccc;
-    padding: 40px 0 0 0;
-}
-
-.footer-content-mobile {
-    padding: 0 20px 30px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.footer-logos-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-}
-
-.footer-main-logos-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.footer-main-logos-mobile img:nth-child(1) {
-    height: clamp(28px, 5vw, 32px);
-}
-
-.footer-main-logos-mobile img:nth-child(2) {
-    height: clamp(20px, 4vw, 24px);
-}
-
-.footer-main-logos-mobile img:nth-child(3) {
-    height: clamp(24px, 4.5vw, 28px);
-}
-
-.footer-cross-mobile {
-    height: clamp(32px, 6vw, 36px);
-    margin: 0 auto;
-}
-
-.footer-content-mobile p {
-    color: #ccc;
-    font-family: Inter, sans-serif;
-    font-size: clamp(16px, 3.5vw, 18px);
-    line-height: 1.4;
-    text-align: center;
-    margin: 0;
-}
-
-.footer-links-mobile {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-links-col-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    flex: 1;
-}
-
-.footer-links-col-mobile a {
-    color: #ccc;
-    text-decoration: none;
-    font-family: Inter, sans-serif;
-    font-size: clamp(16px, 3.5vw, 18px);
-    transition: color 0.2s;
-}
-
-.footer-links-col-mobile a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.footer-policy-mobile {
-    color: #aaa !important;
-    font-size: clamp(14px, 3vw, 16px) !important;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-}
-
-.footer-policy-mobile:hover {
-    color: #ccc !important;
-}
-
-.footer-contacts-mobile {
-    text-align: center;
-}
-
-.footer-contacts-mobile p {
-    margin: 5px 0;
-    font-size: clamp(16px, 3.5vw, 18px);
-}
-
-.footer-socials-mobile {
-    display: flex;
     gap: 15px;
     justify-content: center;
     margin-top: 20px;
 }
 
-.footer-socials-mobile img {
+.footer-mobile-socials img {
     width: clamp(24px, 5vw, 28px);
     height: clamp(24px, 5vw, 28px);
     filter: brightness(0) invert(1) grayscale(1);
     transition: filter 0.2s;
 }
 
-.footer-socials-mobile img:hover {
+.footer-mobile-socials img:hover {
     filter: brightness(1) invert(0.2) grayscale(0);
 }
 
@@ -3393,6 +1769,232 @@ footer {
     .team-mobile-nav-indicator {
         width: 18px;
         height: 3px;
+    }
+}
+
+/* Портфолио на мобильной главной */
+.portfolio-mobile {
+    padding: 30px 15px;
+    background: #fff;
+}
+
+.portfolio-title-mobile {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    color: #222;
+    margin: 0 0 25px 0;
+    line-height: 1.1;
+}
+
+.portfolio-grid-mobile {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.portfolio-col-left {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.portfolio-col-right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+.portfolio-item-mobile {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 380px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.portfolio-item-mobile.small {
+    height: 230px;
+}
+
+.portfolio-item-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item-mobile:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-content-mobile {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 10;
+    display: block;
+    visibility: visible;
+}
+
+.portfolio-name-mobile {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    background: rgba(255,255,255,0.95);
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    display: inline-block;
+    visibility: visible;
+    z-index: 12;
+}
+
+.portfolio-btn-mobile {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    color: #222;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+}
+
+.bt-mobile {
+    margin-top: 25px;
+    height: 35px;
+    background: black;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bt-mobile p {
+    margin: 0;
+    font-family: Inter;
+    font-size: 14px;
+}
+
+.circle-mobile {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;    
+    background: #fff;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 480px) {
+    .portfolio-mobile {
+        padding: 25px 10px;
+    }
+    
+    .portfolio-title-mobile {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .portfolio-grid-mobile {
+        gap: 8px;
+    }
+    
+    .portfolio-col-left,
+    .portfolio-col-right {
+        gap: 12px;
+    }
+    
+    .portfolio-item-mobile {
+        height: 320px;
+    }
+    
+    .portfolio-item-mobile.small {
+        height: 200px;
+    }
+    
+    .portfolio-name-mobile {
+        font-size: 13px;
+        padding: 5px 8px;
+    }
+    
+    .portfolio-btn-mobile {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .portfolio-mobile {
+        padding: 20px 8px;
+    }
+    
+    .portfolio-title-mobile {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .portfolio-grid-mobile {
+        gap: 6px;
+    }
+    
+    .portfolio-col-left,
+    .portfolio-col-right {
+        gap: 10px;
+    }
+    
+    .portfolio-item-mobile {
+        height: 280px;
+    }
+    
+    .portfolio-item-mobile.small {
+        height: 180px;
+    }
+    
+    .portfolio-name-mobile {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+    
+    .portfolio-btn-mobile {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+    
+    .bt-mobile {
+        height: 32px;
+        padding: 0 16px;
+        font-size: 18px;
+    }
+    
+    .bt-mobile p {
+        font-size: 13px;
     }
 }
 

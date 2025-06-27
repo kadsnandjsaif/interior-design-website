@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navItems.forEach(item => {
         item.addEventListener('click', function(e) {
             const tab = this.dataset.tab;
+            const isMobile = window.innerWidth <= 600;
             if (tab === 'contacts') {
                 setActive('contacts');
             } else if (tab === 'requisites') {
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (tab === 'blog') {
                 window.location.href = 'blogger.html';
             } else if (tab === 'philosophy') {
-                window.location.href = 'doverie.html';
+                window.location.href = isMobile ? 'portfolio-detail-m.html' : 'portfolio-detail.html';
             } else if (tab === 'services') {
                 window.location.href = 'index.html#services-section';
             }

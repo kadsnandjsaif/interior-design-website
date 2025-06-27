@@ -457,11 +457,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.footer-link').forEach(link => {
     link.addEventListener('click', function(e) {
       const text = this.textContent.trim();
+      const isMobile = window.innerWidth <= 600;
       if (text === 'Услуги') window.location.href = 'index.html#services-section';
-      else if (text === 'Портфолио') window.location.href = 'portfolio.html';
-      else if (text === 'О нас') window.location.href = 'about.html';
-      else if (text === 'Блог') window.location.href = 'blogger.html';
-      else if (text === 'Философия') window.location.href = 'doverie.html';
+      else if (text === 'Портфолио') window.location.href = isMobile ? 'portfolio-m.html' : 'portfolio.html';
+      else if (text === 'О нас') window.location.href = isMobile ? 'about-m.html' : 'about.html';
+      else if (text === 'Блог') window.location.href = isMobile ? 'blogger-m.html' : 'blogger.html';
+      else if (text === 'Философия') window.location.href = isMobile ? 'portfolio-detail-m.html' : 'portfolio-detail.html';
       else if (text === 'Контакты') window.location.href = 'modalWindow.html';
     });
   });
